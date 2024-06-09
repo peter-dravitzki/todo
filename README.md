@@ -6,7 +6,7 @@ For this challenge, we will build a todo app (which is a common way to practice 
 
 ### 0. Cloning and installation
 
-- [ ] Clone this repo, navigate to it, install packages, and start the server with `npm run dev`
+- [x] Clone this repo, navigate to it, install packages, and start the server with `npm run dev`
   <details style="padding-left: 2em">
     <summary>Tip</summary>
 
@@ -39,14 +39,14 @@ Here's a list of steps in case they are useful. You can build in any order you l
 
 ### 1. Building the database
 
-- [ ] Design a database to store a list of tasks, e.g. task details, priority, completed yes/no
-- [ ] Build the migrations and seed data
-- [ ] Build some basic database functions e.g. getAll, getById, create, delete and update.
+- [X] Design a database to store a list of tasks, e.g. task details, priority, completed yes/no
+- [X] Build the migrations and seed data
+- [X] Build some basic database functions e.g. getAll, getById, create, delete and update.
 
 ### 2. Building the API
 
-- [ ] Build an API (back end route) to get the information from your database (list, add, update and delete)
-- [ ] Test your API with Insomnia
+- [X] Build an API (back end route) to get the information from your database (list, add, update and delete)
+- [X] Test your API with Insomnia
 
 ## Front end (Client-side)
 
