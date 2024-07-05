@@ -7,26 +7,27 @@ interface Props {
 export default function ToDoList({ todos }: Props) {
   const deleteTodo = useDeleteTodo()
 
-  const handleDelete = async (
-    id: number,
-    e: { preventDefault: () => void },
-  ) => {
+  function handleDelete(id: number, e: { preventDefault: () => void }) {
     e.preventDefault()
     deleteTodo.mutate(id)
+    return
   }
   return (
     <>
-      <div>ToDoList</div>
-      <ul>
+      <input id="toggle-all" className="toggle-all" type="checkbox" />
+      <label htmlFor="toggle-all">Mark all as complete</label>
+      <ul className="todo-list">
         {todos.map((todo) => (
           <li key={todo.id}>
-            {todo.task_name}{' '}
-            <button
-              className="delete-btn"
-              onClick={(e) => handleDelete(todo.id, e)}
-            >
-              Delete
-            </button>
+            <div className="view">
+              <input className="toggle" type="checkbox" />
+              <label>{todo.task_name}</label>
+              <button
+                className="destroy"
+                type="submit"
+                onClick={(e) => handleDelete(todo.id, e)}
+              ></button>
+            </div>
           </li>
         ))}
       </ul>

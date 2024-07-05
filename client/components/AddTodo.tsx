@@ -28,7 +28,6 @@ function AddTodo() {
   return (
     <>
       <form onSubmit={(e) => handleSubmit(e)}>
-        <label htmlFor="todo">New Todo: </label>
         <input
           onChange={(e) => handleChange(e)}
           id="todo"
