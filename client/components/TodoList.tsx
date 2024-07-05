@@ -1,5 +1,5 @@
 import { Todo } from '../../models/todo'
-import { useDeleteTodo } from '../hooks/useTodo'
+import useDeleteTodo from '../hooks/useDeleteTodo'
 
 interface Props {
   todos: Todo[]
@@ -9,7 +9,8 @@ export default function ToDoList({ todos }: Props) {
 
   function handleDelete(id: number, e: { preventDefault: () => void }) {
     e.preventDefault()
-    deleteTodo.mutate(id)
+    deleteTodo.mutate(`${id}`)
+
     return
   }
   return (

@@ -1,13 +1,11 @@
 import { useMutation, useQueryClient } from '@tanstack/react-query'
-import request from 'superagent'
+import { deleteTodoById } from '../apis/todoApi'
 
-export function useDeleteTodo() {
+export default function useDeleteTodo() {
   const queryClient = useQueryClient()
 
   return useMutation({
-    mutationFn: async (id: number) => {
-      await request.delete(`/api/v1/todos/${id}`)
-    },
+    mutationFn: deleteTodoById,
     onSuccess: async () => {
       queryClient.invalidateQueries({ queryKey: ['todos'] })
     },
