@@ -4,6 +4,7 @@
   "version": "0.1.0",
   "description": "Todo Full Stack",
   "main": "server/index.ts",
+  "homepage": "https://peter-dravitzki.github.io/todo/",
   "scripts": {
     "start": "node dist/server.ts",
     "predeploy" : "npm run build",
