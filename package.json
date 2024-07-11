@@ -5,13 +5,13 @@
   "description": "Todo Full Stack",
   "main": "server/index.ts",
   "scripts": {
-    "start": "node dist/server.js",
+    "start": "node dist/server.ts",
     "dev": "run-p dev:client dev:server",
     "dev:client": "vite",
     "dev:server": "tsx watch server/index.ts",
     "build": "run-s build:client build:server",
     "build:client": "vite build",
-    "build:server": "esbuild --packages=external --platform=node --format=esm --outfile=dist/server.js --bundle server/index.ts",
+    "build:server": "esbuild --packages=external --platform=node --format=esm --outfile=dist/server.ts --bundle server/index.ts",
     "test": "vitest",
     "knex": "knex --knexfile ./server/db/knexfile.js",
     "lint": "eslint --ext .js,.jsx,.ts,.tsx .",
@@ -31,7 +31,7 @@
   "devDependencies": {
     "@devacademy/eslint-config": "^1.10.1",
     "@tanstack/eslint-plugin-query": "^5.12.2",
-    "@tanstack/react-query": "^5.12.2",
+    "@tanstack/react-query": "^5.50.1",
     "@tanstack/react-query-devtools": "^5.13.3",
     "@testing-library/jest-dom": "^6.2.0",
     "@testing-library/react": "^14.0.0",
@@ -56,6 +56,7 @@
     "prettier": "^3.2.5",
     "react": "^18.0.2",
     "react-dom": "^18.2.0",
+    "react-query": "^3.39.3",
     "react-router-dom": "^6.11.2",
     "sass": "^1.50.1",
     "supertest": "^6.3.4",
@@ -67,6 +68,7 @@
   "dependencies": {
     "express": "^4.17.2",
     "knex": "^2.5.1",
+    "react-query": "^3.39.3",
     "sqlite3": "^5.1.6",
     "superagent": "^8.1.2"
   },

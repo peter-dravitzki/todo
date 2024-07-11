@@ -1,5 +1,6 @@
 import express from 'express'
 import * as Path from 'node:path'
+import tasks from './routes/beTaskRoutes'
 
 const server = express()
 
