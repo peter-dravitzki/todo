@@ -34,9 +34,16 @@ function AddTodo() {
           name="todo"
           className="new-todo"
           placeholder="What do you need to do?"
+<<<<<<< HEAD
           value={form}
         />
         <button>Submit</button>
+=======
+          // eslint-disable-next-line jsx-a11y/no-autofocus
+          autoFocus
+          value={form}
+        />
+>>>>>>> todo/main
       </form>
     </>
   )

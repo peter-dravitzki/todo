@@ -1,7 +1,7 @@
 import request from 'superagent'
 import { Todo, TodoData } from '../../models/todo'
 
-const rootUrl = '/api/v1'
+const rootUrl = '/api/v1/todos'
 //Create new Todo
 export async function addTodo(todo: string) {
   const newTask: TodoData = {
@@ -23,7 +23,7 @@ export async function fetchTodoById(id: string): Promise<Todo> {
 }
 
 //Update single todo by id
-export async function updateTodoById(updatedTodo: string, id: number) {
+export async function updateTodoById(id: number, updatedTodo: TodoData) {
   await request.patch(`${rootUrl}/${id}`).send(updatedTodo)
 }
 //delete single todo by id
